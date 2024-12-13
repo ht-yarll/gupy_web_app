@@ -4,6 +4,7 @@
 the objective of this project is to fetch data from a gupy API and display it in a web app using python and some libraries.
 
 API LINK: https://portal.api.gupy.io/api/job?name=dados&offset=0&limit=400
+doc: https://developers.gupy.io/reference/introduction
 
 Documentation link for used libs:
 
