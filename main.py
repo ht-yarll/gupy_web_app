@@ -64,9 +64,15 @@ fig3 = px.pie(
 
 
 #Building Web App
+st.title('Relações Gráficas')
+st.subheader('dados retirados da api e insights')
+st.divider()
+
 st.plotly_chart(fig)
 st.write('Vemos grande concentração de vagas de emprego em São Paulo e também\
-          em locais onde os dados não foram encontrados')
+          em locais onde os dados não foram encontrados, majoritariamente onde\
+         não se tem informação de onde vieram esses dados, possuem vagas no modelo\
+         remoto')
 st.divider()
 
 col1, col2 = st.columns(2)
@@ -74,4 +80,7 @@ col1, col2 = st.columns(2)
 col1.plotly_chart(fig2)
 col2.plotly_chart(fig3)
 st.write('Fica nítido com a análise dos dados que as áreas de tecnologia\
-         vem liderando nos modos de trabalho **remoto** e **híbrido**')
+         vem liderando nos modos de trabalho **remoto** e **híbrido**. \
+         **Dados**, **Frontend** e **UX/UI** possuem grande concentração \
+         de vagas remotas, enquanto **RH** e **Administração**, o modelo\
+         presencial lidera.')

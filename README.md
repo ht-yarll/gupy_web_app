@@ -21,7 +21,7 @@ Main objectives:
 bonus:
 
 - [ ] create filters for hierarchy in an field: intern, junior, ...
-- [ ] create filter through state [ ]
+- [ ] create filter through state
 - [X] fill unnvaiable data
 
 !!! MUST USE PYTHON !!!
