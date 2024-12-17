@@ -14,14 +14,14 @@ streamlit: https://docs.streamlit.io/develop/api-reference
 
 Main objectives:
 
-- create graphs to compare which state has more jobs [ ];
-- create graphs correlating which job is more abundant [ ];
-- been able to see a correlation between jobs and workplace types [ ];
+- [X] create graphs to compare which state has more jobs;
+- [X] create graphs correlating which job is more abundant;
+- [X] been able to see a correlation between jobs and workplace types;
 
 bonus:
 
-- create filters for hierarchy in an field: intern, junior, ... [ ]
-- create filter through state [ ]
-- fill unnvaiable data [ ]
+- [ ] create filters for hierarchy in an field: intern, junior, ...
+- [ ] create filter through state [ ]
+- [X] fill unnvaiable data
 
 !!! MUST USE PYTHON !!!

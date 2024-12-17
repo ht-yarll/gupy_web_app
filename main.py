@@ -33,7 +33,7 @@ df_jobs_workplace_type_count = (df_jobs.groupby(['state', 'job_type'])
                 ).reset_index()
     )
 
-fig2 = px.bar(
+fig2 = px.histogram(
     df_jobs_workplace_type_count,
     x= 'workplaceType',
     y = 'workplace_type_count',
@@ -41,11 +41,29 @@ fig2 = px.bar(
     labels = {
         'workplaceType': 'Tipo de Vaga',
         'workplace_type_count': 'Valores',
+        'job_type': 'área'
     },
     barmode='group',
+    text_auto=True,
     title= 'Relação Entre Quantidade e Forma de Trabalho'
 )
 
+fig3 = px.pie(
+        df_jobs_workplace_type_count,
+        names='workplaceType', 
+        values='workplace_type_count',
+        facet_col='job_type',
+        facet_col_wrap=2,
+        facet_col_spacing=0.01,            
+        facet_row_spacing=0.2,
+        labels={
+            'job_type': 'Área',            
+            },
+        title= 'Modo de Trabalho e Área de Trabalho'
+        )
+
+
+#Building Web App
 st.plotly_chart(fig)
 st.write('Vemos grande concentração de vagas de emprego em São Paulo e também\
           em locais onde os dados não foram encontrados')
@@ -54,3 +72,6 @@ st.divider()
 col1, col2 = st.columns(2)
 
 col1.plotly_chart(fig2)
+col2.plotly_chart(fig3)
+st.write('Fica nítido com a análise dos dados que as áreas de tecnologia\
+         vem liderando nos modos de trabalho **remoto** e **híbrido**')
