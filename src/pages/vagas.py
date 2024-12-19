@@ -1,4 +1,4 @@
-from utils.dataframe import df_jobs
+from fetch_data.api.gupy import df_jobs
 
 import pandas as pd
 import streamlit as st

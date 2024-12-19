@@ -1,8 +1,9 @@
-from utils.dataframe import df_jobs
+from fetch_data.api.gupy import df_jobs
 
 import pandas as pd
 import streamlit as st
 import plotly.express as px
+
 
 df_jobs_per_state = (df_jobs.groupby(['state', 'job_type'])
                      .agg(
@@ -10,7 +11,6 @@ df_jobs_per_state = (df_jobs.groupby(['state', 'job_type'])
                          )
                          .reset_index()
 )
-
 
 fig = px.bar(df_jobs_per_state,
        x = 'state',
