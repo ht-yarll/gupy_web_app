@@ -1,7 +1,5 @@
 import json
 
-from fetch_data.api.fetch import fetchdata
-
 import pandas as pd
 import requests
 
